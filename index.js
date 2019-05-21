@@ -126,7 +126,6 @@ var left = 0;
      } else {
        window.setTimeout(()=>{
          alert("YOU LOSE!")}, 1000);
-       //alert("YOU LOSE!!");
      }
    }
  }
@@ -141,15 +140,15 @@ var left = 0;
     * And be sure to use the functions declared below!
     */
     if(e.which===LEFT_ARROW) {
+      moveDodgerLeft();
       e.preventDefault();
       e.stopPropagation();
-      moveDodgerLeft();
     }
 
     if(e.which===RIGHT_ARROW) {
+      moveDodgerRight();
       e.preventDefault();
       e.stopPropagation();
-      moveDodgerRight();
     }
  }
 
