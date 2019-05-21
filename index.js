@@ -130,13 +130,14 @@ var left = 0;
      //ROCKS[i].style.display = "none";
    //}
    let allRocks = document.querySelectorAll(".rock");
-   for(let i=0; i<allRocks.length; i++) {
-     allRocks[i].remove();
+   for(let i=0; i<allRocks.length+1; i++) {
+     if(i<allRocks.length) {
+       [i].remove();
+     } else {
+       window.removeEventListener('keydown', moveDodger);
+       alert("YOU LOSE!!");
+     }
    }
-   //document.removeChild("div.rock");
-   ROCKS.length = 0;
-   window.removeEventListener('keydown', moveDodger);
-   alert("YOU LOSE!!");
  }
 
  function moveDodger(e) {
