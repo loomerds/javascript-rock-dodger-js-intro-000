@@ -132,6 +132,7 @@ var left = 0;
    let allRocks = document.querySelectorAll(".rock");
    for(let i=0; i<allRocks.length+1; i++) {
      if(i<allRocks.length) {
+       ROCKS[i].style.display = "none";
        allRocks[i].remove();
      } else {
        window.removeEventListener('keydown', moveDodger);
