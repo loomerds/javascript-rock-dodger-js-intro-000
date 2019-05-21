@@ -120,10 +120,9 @@ var left = 0;
    window.removeEventListener('keydown', moveDodger);
 
    let allRocks = document.querySelectorAll(".rock");
-   for(let i=0; i<allRocks.length+2; i++) {
+   for(let i=0; i<allRocks.length+1; i++) {
      if(i<allRocks.length) {
        allRocks[i].remove();
-     } else if(i===allRocks.length+1) {
      } else {
        alert("YOU LOSE!!");
      }
@@ -153,8 +152,6 @@ var left = 0;
  }
 
  function moveDodgerLeft() {
-   console.log(left);
-   console.log(DODGER.style.left);
    // implement me!
    /**
     * This function should move DODGER to the left
