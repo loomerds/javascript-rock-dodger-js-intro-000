@@ -125,7 +125,7 @@ var left = 0;
        allRocks[i].remove();
      } else {
        window.setTimeout(()=>{
-         alert("YOU LOSE!")}, 3000);
+         alert("YOU LOSE!")}, 1000);
        //alert("YOU LOSE!!");
      }
    }
