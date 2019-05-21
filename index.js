@@ -25,14 +25,11 @@ var left = 0;
    // rocks are 20px high
    // DODGER is 20px high
    // GAME_HEIGHT - 20 - 20 = 360px;
-   if (top > 360) { // if the rock is far enough down to be able to touch the Dodger
+   if (top > 360) {
      const dodgerLeftEdge = positionToInteger(DODGER.style.left)
      // FIXME: The DODGER is 40 pixels wide -- how do we get the right edge?
-     //const dodgerRightEdge = DODGER.offsetWidth;
      const dodgerRightEdge = dodgerLeftEdge + 40;
-     //console.log(dodgerRightEdge);
      const rockLeftEdge = positionToInteger(rock.style.left)
-     //Sconsole.log(rockLeftEdge);
      // FIXME: The rock is 20 pixel's wide -- how do we get the right edge?
      const rockRightEdge = rockLeftEdge + 20;
 
@@ -63,8 +60,6 @@ var left = 0;
 
    // Hmmm, why would we have used `var` here?
    var top = 0;
-   //var left = 0;
-
    rock.style.top = top;
 
    /**
@@ -100,9 +95,7 @@ var left = 0;
       * we should remove the rock from the DOM
       */
       else {
-        //rock.style.display = "none";
         window.requestAnimationFrame(moveRock);
-
       }
    }
 
@@ -110,9 +103,7 @@ var left = 0;
    window.requestAnimationFrame(moveRock);
    // Add the rock to ROCKS so that we can remove all rocks
    // when there's a collision
-   //console.log(rock)
    ROCKS.push(rock)
-   //console.log(ROCKS);
 
    // Finally, return the rock element you've created
    return rock;
@@ -126,16 +117,13 @@ var left = 0;
  */
  function endGame() {
    clearInterval(gameInterval);
-   //for(let i=0; i<ROCKS.length; i++) {
-     //ROCKS[i].style.display = "none";
-   //}
-   //ROCKS.length = 0;
+   window.removeEventListener('keydown', moveDodger);
+
    let allRocks = document.querySelectorAll(".rock");
    for(let i=0; i<allRocks.length+2; i++) {
      if(i<allRocks.length) {
        allRocks[i].remove();
      } else if(i===allRocks.length+1) {
-       window.removeEventListener('keydown', moveDodger);
      } else {
        alert("YOU LOSE!!");
      }
