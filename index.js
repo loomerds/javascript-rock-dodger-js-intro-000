@@ -126,9 +126,9 @@ var left = 0;
  */
  function endGame() {
    clearInterval(gameInterval);
-   for(let i=0; i<ROCKS.length; i++) {
-     ROCKS[i].style.display = "none";
-   }
+   //for(let i=0; i<ROCKS.length; i++) {
+     //ROCKS[i].style.display = "none";
+   //}
    document.removeChild("div.rock");
    ROCKS.length = 0;
    window.removeEventListener('keydown', moveDodger);
