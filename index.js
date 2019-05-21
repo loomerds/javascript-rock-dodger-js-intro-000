@@ -131,11 +131,12 @@ var left = 0;
    //}
    //ROCKS.length = 0;
    let allRocks = document.querySelectorAll(".rock");
-   for(let i=0; i<allRocks.length; i++) {
+   for(let i=0; i<allRocks.length+2; i++) {
      if(i<allRocks.length) {
        allRocks[i].remove();
-     } else {
+     } else if(i===allRocks.length+1) {
        window.removeEventListener('keydown', moveDodger);
+     } else {
        alert("YOU LOSE!!");
      }
    }
