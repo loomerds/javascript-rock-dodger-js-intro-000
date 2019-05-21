@@ -129,9 +129,9 @@ var left = 0;
    //for(let i=0; i<ROCKS.length; i++) {
      //ROCKS[i].style.display = "none";
    //}
-   ROCKS.length = 0;
+   //ROCKS.length = 0;
    let allRocks = document.querySelectorAll(".rock");
-   for(let i=0; i<allRocks.length+1; i++) {
+   for(let i=0; i<allRocks.length; i++) {
      if(i<allRocks.length) {
        allRocks[i].remove();
      } else {
