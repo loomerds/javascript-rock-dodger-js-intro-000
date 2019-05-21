@@ -129,7 +129,7 @@ var left = 0;
    for(let i=0; i<ROCKS.length; i++) {
      ROCKS[i].style.display = "none";
    }
-   document.removeChild("rock");
+   document.removeChild("div.rock");
    ROCKS.length = 0;
    window.removeEventListener('keydown', moveDodger);
    alert("YOU LOSE!!");
